@@ -110,7 +110,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'djangoapiauth',
         'HOST': 'apiauth.cayoxgnlehvr.sa-east-1.rds.amazonaws.com',
-        'PORT': '5432'
+        'PORT': ''
     }
 }
 
