@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-q_zrjg6x^)s3zg5winf*ra%$&n#y2#c0aojuj*c$5z_q!^m!=5
 DEBUG = True
 #DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['15.229.0.243','127.0.0.1']
+ALLOWED_HOSTS = ['15.229.0.243','127.0.0.1','localhost']
 
 """
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -162,6 +162,27 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
