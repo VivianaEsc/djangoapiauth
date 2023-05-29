@@ -96,23 +96,23 @@ TEMPLATES = [
     }
 }"""
 
-DATABASES = { 
-    'default': dj_database_url.config(
-        default = 'sqlite:///db.sqlite3',
-        conn_max_age = 600
-    )
-}
-
 # DATABASES = { 
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'api_auth',
-#         'USER': 'postgres',
-#         'PASSWORD': 'djangoapiauth',
-#         'HOST': 'apiauth.cayoxgnlehvr.sa-east-1.rds.amazonaws.com',
-#         'PORT': ''
-#     }
+#     'default': dj_database_url.config(
+#         default = 'sqlite:///db.sqlite3',
+#         conn_max_age = 600
+#     )
 # }
+
+DATABASES = { 
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'api_auth',
+        'USER': 'postgres',
+        'PASSWORD': 'Rfr789852123DCP',
+        'HOST': 'apiauth.cayoxgnlehvr.sa-east-1.rds.amazonaws.com',
+        'PORT': ''
+    }
+}
 
 
 # Password validation
