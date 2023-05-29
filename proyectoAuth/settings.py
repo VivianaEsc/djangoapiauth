@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-#import dj_database_url
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-q_zrjg6x^)s3zg5winf*ra%$&n#y2#c0aojuj*c$5z_q!^m!=5
 DEBUG = False
 #DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = ['15.229.0.243','186.4.241.122']
+ALLOWED_HOSTS = ['15.229.0.243']
 
 """
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -96,23 +96,23 @@ TEMPLATES = [
     }
 }"""
 
-# DATABASES = { 
-#     'default': dj_database_url.config(
-#         default = 'sqlite:///db.sqlite3',
-#         conn_max_age = 600
-#     )
-# }
-
 DATABASES = { 
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'api_auth',
-        'USER': 'postgres',
-        'PASSWORD': 'djangoapiauth',
-        'HOST': 'apiauth.cayoxgnlehvr.sa-east-1.rds.amazonaws.com',
-        'PORT': ''
-    }
+    'default': dj_database_url.config(
+        default = 'sqlite:///db.sqlite3',
+        conn_max_age = 600
+    )
 }
+
+# DATABASES = { 
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'api_auth',
+#         'USER': 'postgres',
+#         'PASSWORD': 'djangoapiauth',
+#         'HOST': 'apiauth.cayoxgnlehvr.sa-east-1.rds.amazonaws.com',
+#         'PORT': ''
+#     }
+# }
 
 
 # Password validation
@@ -167,5 +167,6 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
     'http://192.168.0.114:4200',
-    'http://186.4.241.122:4200'
+    'http://186.4.241.122:4200',
+    'http://localhost:4200'
 ]
