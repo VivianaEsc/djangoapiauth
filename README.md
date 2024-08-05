@@ -5,14 +5,13 @@
 Este proyecto implementa una API Rest utilizando Django y la librería Django Rest Framework (DRF). Contiene configuraciones para la conexión a una base de datos MySQL y un módulo para la gestión de usuarios con funcionalidades de creación, login, logout y autenticación mediante JSON Web Token (JWT).
 
 ## Contenidos
-1. [Conexión a base de datos MySQL](#1-conexión-a-base-de-datos-mysql)
-2. [Módulo para gestión de usuarios](#2-módulo-para-gestión-de-usuarios)
-   - [Método para creación de usuario](#21-método-para-creación-de-usuario)
-   - [Método para Login](#22-método-para-login)
-   - [Método para Logout](#23-método-para-logout)
+1. [Conexión a base de datos MySQL] 
+2. [Módulo para gestión de usuarios] 
+   - [Método para creación de usuario] 
+   - [Método para Login] 
+   - [Método para Logout] 
    - [Método para utilización de JSON Web Token en autenticación](#24-método-para-utilización-de-json-web-token-en-autenticación)
-   - [Modelo de datos](#25-modelo-de-datos)
-
+   - [Modelo de datos] 
 ### 1. Conexión a base de datos MySQL
 #### Herramientas
 - Django
